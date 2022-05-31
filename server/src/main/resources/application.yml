@@ -1,0 +1,19 @@
+server:
+  port: 80
+
+web:
+  upload-path: D:\private job\03162022 newstudenttoschool\webserver\src\main\resources\static\image
+
+spring:
+  resources:
+    static-locations: file:${web.upload-path},classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://101.35.95.141:3306/03172022demo?characterEncoding=utf-8&useSSL=false
+    username: langdonghe
+    password: langdonghe
+multipart:
+  enabled: true
+  #location: roy-upload-tmp
+  max-file-size: 100MB
+  max-request-size: 100MB
